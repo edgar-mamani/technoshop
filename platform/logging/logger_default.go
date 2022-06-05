@@ -37,6 +37,14 @@ func (l *DefaultLogger) Debugf(tpl string, vals ...interface{}) {
 	l.write(Debug, fmt.Sprintf(tpl, vals...))
 }
 
+func (l *DefaultLogger) Info(msg string) {
+	l.write(Info, msg)
+}
+
+func (l *DefaultLogger) Infof(tpl string, vals ...interface{}) {
+	l.write(Info, fmt.Sprintf(tpl, vals...))
+}
+
 func (l *DefaultLogger) Warn(msg string) {
 	l.write(Warn, msg)
 }
